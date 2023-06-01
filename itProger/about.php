@@ -1,10 +1,10 @@
 <?php
-$title='ОБ НАС';
+$title='О НАС';
 require 'blocks/header.php';
 
 ?>
 <div class="container mt-2">
-    <h1>ОБ НАС</h1>
+    <h1>О НАС</h1>
     <form action="check_get.php" method="get">
         <input type="text" name="username" placeholder="Введите имя" class="form-control">
         <input type="email" name="email" placeholder="Введите почту" class="form-control">
