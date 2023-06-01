@@ -1,4 +1,5 @@
 <?php
+
 function getArticles()
 {
     return
@@ -19,4 +20,11 @@ function getArticles()
         'content'=>'One more article text text'
         ]
 ];
+}
+
+function checkId(string $id) : bool
+//строгая типизация функции: приводим айди к строковому типу, возвращаем булевое
+{
+//    проверяет что строка состоит только из цифр
+return ctype_digit($id);
 }
