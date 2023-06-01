@@ -15,6 +15,6 @@
 <header>
     <a href="main.php">Main</a> |
     <!--    #можно написать просто "/", переадресовывает на главную страницу    -->
-    <a href="about.php">ОБ НАС СКА</a> |
+    <a href="about.php">О НАС</a> |
     <a href="contacts.php">Связь</a>|
 </header>
