@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="875bac3b-8073-4b89-b47b-63221428fe9d" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ComposerSettings">
+    <execution />
+  </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
+  </component>
+  <component name="PhpWorkspaceProjectConfiguration" interpreter_name="PHP" />
+  <component name="ProjectId" id="2QCLhHtKaNUpDNrYKvYgXei1BoZ" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../OSPanel/modules/php/PHP_7.2/php.exe" />
+    <property name="settings.editor.selected.configurable" value="web-ide.project.structure" />
+    <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="875bac3b-8073-4b89-b47b-63221428fe9d" name="Default Changelist" comment="" />
+      <created>1684852737496</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1684852737496</updated>
+      <workItem from="1684852740466" duration="26000" />
+      <workItem from="1684852801044" duration="7743000" />
+      <workItem from="1684866250902" duration="8135000" />
+      <workItem from="1684899232667" duration="14982000" />
+      <workItem from="1684950131543" duration="3106000" />
+      <workItem from="1684990263899" duration="19198000" />
+      <workItem from="1685081918540" duration="3724000" />
+      <workItem from="1685115654866" duration="36431000" />
+      <workItem from="1685296134689" duration="5124000" />
+      <workItem from="1685304105723" duration="748000" />
+      <workItem from="1685308302301" duration="12575000" />
+      <workItem from="1685365035868" duration="7635000" />
+      <workItem from="1685464599163" duration="10357000" />
+      <workItem from="1685556085207" duration="1749000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
+  </component>
+</project>
