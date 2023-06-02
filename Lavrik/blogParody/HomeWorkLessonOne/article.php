@@ -23,4 +23,6 @@
 	<? endif; ?>
 </div>
 <hr>
+<a href="edit.php?id=<?=$id?>">Edit article</a>
+<hr>
 <a href="index.php">Move to main page</a>

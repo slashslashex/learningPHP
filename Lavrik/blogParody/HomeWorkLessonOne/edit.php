@@ -1,17 +1,8 @@
 <?php
+include_once ('functions.php');
 
-	include_once('functions.php');
-
-	/*
-		your code here
-		check request method
-		read POST-data
-		validate data
-		call addArticle
-	*/
-
-$isPost = false;
-$err = '';
+$isEdited=false;
+$err='';
 if ($_SERVER['REQUEST_METHOD'] === 'POST')
 {
     $title = trim($_POST['title']);
@@ -23,8 +14,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST')
     }
     else
     {
-    addArticle($title, $content);
-        $isPost = true;
+        editArticles($title, $content);
+        $isEdited = true;
     }
 
 } else
@@ -33,24 +24,21 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST')
     $content = '';
 }
 
-//echo $_SERVER['REQUEST_METHOD'];
-//echo '<pre>';
-//print_r($_POST);
-//echo '</pre>';
 ?>
 <div class="form">
-    <? if ($isPost): ?>
-        <p>Your article is posted!</p>
+    <? if ($isEdited): ?>
+        <p>Article edited succesfuly!</p>
     <? else: ?>
         <form method="post">
             Title:<br>
             <input type="text" name="title" value="<?= $title ?>"><br>
             Text:<br>
             <input type="text" name="content" value="<?= $content ?>"><br>
-            <button>Send</button>
+            <button>Edit</button>
             <p><?= $err ?></p>
         </form>
     <? endif; ?>
 </div>
 <hr>
 <a href="index.php">Move to main page</a>
+

@@ -8,7 +8,12 @@
 		check id
 		call removeArticle
 	*/
+$title = trim($_POST['title']);
+$articles = getArticles();
+$id = (int)($_GET['id'] ?? '');
+removeArticle($id)
+
 ?>
-Message about result
+Article deleted succesfuly!
 <hr>
 <a href="index.php">Move to main page</a>

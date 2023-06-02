@@ -1,13 +1,27 @@
 <?php
 
 	// your functions may be here
+function editArticles(string $title, string $content) : bool
+{
+    $articles = getArticles();
+    $id=(int)($_GET['id'] ?? '');
+    $articles[$id] = [
+        'id' => $id,
+        'title' => $title,
+        'content' => $content
+    ];
+    saveArticles($articles);
+    return true;
 
-	/* start --- black box даже не нужно вникать, это не домашнее задание*/
-	function getArticles() : array{
+}
+	/* start --- black box */
+	function getArticles() : array
+    {
 		return json_decode(file_get_contents('db/articles.json'), true);
 	}
 
-	function addArticle(string $title, string $content) : bool{
+	function addArticle(string $title, string $content) : bool
+    {
 		$articles = getArticles();
 
 		$lastId = end($articles)['id'];
@@ -23,7 +37,8 @@
 		return true;
 	}
 
-	function removeArticle(int $id) : bool{
+	function removeArticle(int $id) : bool
+    {
 		$articles = getArticles();
 
 		if(isset($articles[$id])){
@@ -35,7 +50,8 @@
 		return false;
 	}
 
-	function saveArticles(array $articles) : bool{
+	function saveArticles(array $articles) : bool
+    {
 		file_put_contents('db/articles.json', json_encode($articles));
 		return true;
 	}
