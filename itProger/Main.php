@@ -56,7 +56,7 @@ $arr_words=explode(',',$words);
 print_r($arr_words).'<br>';
 echo '<br>'.implode(' | ', $arr_words);
 //Урок 15. Работа с фаелами
-//$file=fopen('text.txt', 'w');#a для добавления r для чтения
+//$file=3_fopen('text.txt', 'w');#a для добавления r для чтения
 //fwrite($file, "example text\ntest");
 //fclose($file);
 $filename='text.txt';
