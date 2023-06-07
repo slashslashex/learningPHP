@@ -1,33 +1,52 @@
 <?php
 include_once ('model/gallery.php');
-//это модерн
-$files = scandir('images');
-$images = array_filter($files, function ($f)
-{
-    return is_file("images/$f") && checkImageName($f);
-});
-/*
-так можно делать руками (велосипед)
-фильтруется директория по критериям "проверка на файл+*.jpg" в массив
-$files = scandir('images');
-$images = [];
-foreach ($files as $f)
-{
-    if (is_file("images/$f") && preg_match('/.*\.jpg$/', $f))
+//загрузка будет в простейшем виде
+
+$isSend = false;
+$err = '';
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+//    var_dump($_FILES['file']);
+    $file = ($_FILES['file']);
+//    if ($file['size']===0) {
+//        $err = 'Файл не выбран или превышает максимальный размер';
+    if ($file['name']==='')
     {
-        $images[] = $f;
+        $err = 'Файл не выбран';
+    } elseif ($file['size']===0)
+    {
+        $err = 'Файл слишком большой';
     }
+//    всегда создаем только белый список
+    elseif (!checkImageName($file['name']))
+    {
+        $err = 'Только jpg';
+    }
+    else
+    {
+        copy($file['tmp_name'], 'images/'.mt_rand(1000, 100000).'.jpg');
+//        var_dump($file);
+        $isSend = true;
+    }
+
 }
-*/
-/*
-echo '<pre>';
-print_r($files);
-print_r($images);
-echo '</pre>';
-*/
+
+//echo $_SERVER['REQUEST_METHOD'];
+//echo '<pre>';
+//print_r($_POST);
+//echo '</pre>';
+
 ?>
-<div class="gallery">
-    <? foreach ($images as $img): ?>
-        <img src="images/<?=$img?>" alt="" width="100">
-    <?endforeach;?>
+<div class="form">
+    <? if ($isSend): ?>
+        <p>Your image is done!</p>
+    <? else: ?>
+        <!--enctype нужно прописывать при отправке файлов, иначе
+        отправится в стандартной кодировке URL ENCODED, могут быть проблемы, файл в принципе
+        на сервер может не попасть-->
+        <form method="post" enctype="multipart/form-data">
+            <input type="file" name="file">
+            <button>Send</button>
+            <p><?= $err ?></p>
+        </form>
+    <? endif; ?>
 </div>
