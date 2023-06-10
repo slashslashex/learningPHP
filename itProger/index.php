@@ -12,7 +12,7 @@
 <?php
 echo 'Просто вывод строк текста';
 echo '<br>'.'<br>';
-    echo "<b>Zdarova</b> <dfn>Zaebal</dfn>";
+    echo "<b>Zdarova</b> <dfn>Privet</dfn>";
     echo '<br>salam';
     echo "<br>\"двойная кавычка в двойной кавычка\"";
     echo '<br>"двойная кавычка в одинарной кавычке"';
@@ -186,7 +186,7 @@ echo'--------click-------'.'<br>';
 click();
 click();
 click();
-echo '<b><ins>Урок 11. Подключение файлов говна</ins></b>'.'<br>';
+echo '<b><ins>Урок 11. Подключение файлов</ins></b>'.'<br>';
 
 
 ?>
