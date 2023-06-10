@@ -130,26 +130,26 @@ $matrix=[
 $matrix[0][1]=4;
 echo $matrix[0][1].'<br>';
 echo '<b><ins>Урок 9. Циклы for, while и do while. Операторы циклов</ins></b>'.'<br>';
-echo '<dfn>Сикл for</dfn>'.'<br>';
+echo '<dfn>Цикл for</dfn>'.'<br>';
 for ($i =100; $i>20;$i-=5){echo $i.'<br>';}#задаем начало цикла (i); задаем порог, до которого будет длиться цикл; задаём шаг каждой итерации
-echo '<dfn>Сикл while</dfn>'.'<br>';
+echo '<dfn>Цикл while</dfn>'.'<br>';
 $u=1;
 while ($u<=10){echo $u.'<br>';$u++;}
-echo '<dfn>Сикл do while</dfn>'.'<br>';
+echo '<dfn>Цикл do while</dfn>'.'<br>';
 $r = 100;
 do {echo $r.'<br>';}while($r<10);
-echo '<dfn>Операторы в сиклах</dfn>'.'<br>';
+echo '<dfn>Операторы в циклах</dfn>'.'<br>';
 for ($el=100; $el>10;$el/=2){
     if ($el<15)
         break;
     if ($el % 2==0)
         continue;
     echo $el.'<br>';}
-echo '<dfn>Сиклы в связке с массивами</dfn>'.'<br>';
+echo '<dfn>Циклы в связке с массивами</dfn>'.'<br>';
 $list=[5,7,3,8, 'some',45.7];#строим массив
 for ($i=1; $i<count($list);$i++)#задаем параметры цикла (стартовая точка, до какого порога будет диться, шаг)
 {echo "Element $i: $list[$i]<br>";}#for наиболее удобен для вывода массива,
-echo '<dfn>Выводим говно ассоциативного массива циклом for each</dfn>'.'<br>';
+echo '<dfn>Выводим штуки ассоциативного массива циклом for each</dfn>'.'<br>';
 $list=['age'=>50, 'name'=>'Alex', 'hobby'=>'football'];
 $arr=[5,6,7,8,9];
 foreach ($list as $item=>$value){echo "Key: $item. Value: $value.<br>";}

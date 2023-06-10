@@ -2,10 +2,10 @@
 
 	// your functions may be here
 function openLog() : array
-//не знаю как заставить читать выбранный файл вместо постоянного
+//не знаю как заставить читать выбранный файл вместо заданного
 {
-    $f=fopen('logs/logs 2023-07-06.txt', 'r');
-    $str = fread($f, filesize('logs/logs 2023-07-06.txt'));
+    $f=fopen('logs/EXAMPLE', 'r');
+    $str = fread($f, filesize('logs/EXAMPLE'));
     $lines=(explode("\n", $str));
 
     unset ($lines[count($lines)-1]);
