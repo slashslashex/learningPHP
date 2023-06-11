@@ -1,4 +1,23 @@
 <?php
+//Глава 3. Управляющая логика для принятия решений и повторения операций
+/*
+$x = strcmp('6 pack',55);
+if ($x > 0) {
+    print 'The string "6 pack" is greater than the number 55.';
+} elseif ($x < 0) {
+    print 'The string "6 pack" is less than the number 55.'; }
+
+$first_name='Joe';
+$last_name='Joe';
+if (! strcasecmp($first_name, $last_name)) {
+    print '$first_name and $last_name are equal.'; }
+
+print '<select name="people">';
+for ($i = 1; $i <= 10; $i++) {
+print "<option>\$i</option>\n";
+}
+print '</select>';
+*/
 /*
 1. Определите истинность или ложность приведенных ниже выражений, не прибегая к помощи
 интерпретатора РНР.
