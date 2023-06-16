@@ -1,50 +1,20 @@
 <?php
-/*
-4. Выясните, как хранить каждый из приведенных ниже видов информации в массиве, а за-
-тем предоставьте пример кода, в котором создается такой массив, состоящий из нескольких
-элементов. Например, в следующем ассоциативном массиве в качестве ключа служит Ф.И.О.
-учащегося, а качестве значения — ассоциативный массив, состоящий из классов и идентифи-
-кационных номеров учащихся:
-$students =
-[ 'James D. McCawley' => [ 'grade' => 'A+', 'id' => 271231 ],
-'Buwei Yang Chao' => [ 'grade' => 'A', 'id' => 818211] ];
-• Классы и идентификационные номера учащихся в классе.
-• Количество каждого товара в запасах на складе.
-• Школьные обеды, состоящие из разных блюд (закуски, салаты, напитки и т.д.), а также
-их стоимость на каждый день недели.
-• Имена членов вашей семьи.
-• Имена, возраст и родство членов вашей семьи.
-*/
-$school=
-[
-    'classRoomNumber1'=>['StudName1'=>'StudId1','StudName2'=>'StudId2','StudName3'=>'StudId3'],
-    'classRoomNumber2'=>['StudName1'=>'StudId2','StudName2'=>'StudId2','StudName3'=>'StudId3'],
-    'classRoomNumber3'=>['StudName1'=>'StudId3','StudName2'=>'StudId2','StudName3'=>'StudId3'],
-    'classRoomNumber4'=>['StudName1'=>'StudId4','StudName2'=>'StudId2','StudName3'=>'StudId3'],
-];
-$goods=
-[
-    'warehouseNumber1'=>['goodsName1'=>'quantity', 'goodsName2'=>'quantity', 'goodsName3'=>'quantity'],
-    'warehouseNumber2'=>['goodsName1'=>'quantity','goodsName2'=>'quantity', 'goodsName3'=>'quantity'],
-    'warehouseNumber3'=>['goodsName1'=>'quantity','goodsName2'=>'quantity','goodsName3'=>'quantity'],
-    'warehouseNumber4'=>['goodsName1'=>'quantity','goodsName2'=>'quantity', 'goodsName3'=>'quantity'],
-];
-$lunches=
-    [
-      'Monday'=>['dish1'=>'MondayPrice','dish2'=>'MondayPrice','dish3'=>'MondayPrice'],
-        'Tuesday'=>['dish1'=>'TuesdayPrice','dish2'=>'TuesdayPrice','dish3'=>'TuesdayPrice'],
-        'Wednesday'=>['dish1'=>'WednesdayPrice','dish2'=>'WednesdayPrice','dish3'=>'WednesdayPrice'],
-        'thursday'=>['dish1'=>'thursdayPrice','dish2'=>'thursdayPrice','dish3'=>'thursdayPrice'],
-        'friday'=>['dish1'=>'fridayPrice','dish2'=>'fridayPrice','dish3'=>'fridayPrice'],
-
-    ];
-$familyShort=['Mom'=>'MomName', 'Dad'=>'DadName'];
-$familyFull=
-    [
-        'Mom'=>['Name'=>'MomName', 'Age'=>'MomAge'],
-        'Dad'=>['Name'=>'DadName', 'Age'=>'DadAge'],
-        'Bro'=>['Name'=>'BroName', 'Age'=>'BroAge']
-    ];
+$specials=[['Chestnut Bun', 'Walnut Bun', 'Peanut Bun'],
+    ['Chestnut Salad', 'Walnut Salad', 'Peanut Salad']];
 print '<pre>';
-print_r($school);
+print_r ($specials);
 print '</pre>';
+//print $specials[0];
+//$specials = array( array('Chestnut Bun', 'Walnut Bun', 'Peanut Bun'), array('Chestnut Salad', 'Walnut Salad', 'Peanut Salad') );
+// Переменная $num_specials содержит значение 2: количество
+// элементов в первой размерности массива $specials
+for ($i = 0, $num_specials = count($specials); $i < $num_specials; $i++)
+{
+// Переменная $num_sub содержит значение 3: количество
+// элементов в каждом подмассиве
+for ($m = 0, $num_sub = count($specials[$i]); $m < $num_sub; $m++)
+{
+print "Element [$i][$m] is ".$specials[$i][$m].'<br>';
+}
+}
+print '<br>';
