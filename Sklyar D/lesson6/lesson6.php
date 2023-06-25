@@ -147,6 +147,8 @@ $soup = new Entree('Chicken Soup', array('chicken', 'water'));
 $sandwich = new Entree('Chicken Sandwich', array('chicken', 'bread'));
 // Составное блюдо
 $combo = new ComboMeal('Soup + Sandwich', array($soup, $sandwich));
+print '<pre>';
+print_r($combo);
 foreach (['chicken','water','pickles'] as $ing)
 {
     if ($combo->hasIngredient($ing))

@@ -45,3 +45,17 @@ class EntreeWithIngredients extends Entree
         return $totalCost;
     }
 }
+/*
+$broccoli = new Ingredient('Broccoli', '5.25');
+$cucumber = new Ingredient('Cucumber', '1.15');
+$carrot = new Ingredient('Carrot', '3.00');
+$broccoli->changeCost(3);
+print '<pre>';
+print_r($broccoli);
+print '<br>';
+$salad = new EntreeWithIngredients('salad', [$broccoli, $cucumber, $carrot]);
+print '<pre>';
+print_r($salad);
+print '<br>';
+print $salad->getTotalCost();
+*/
