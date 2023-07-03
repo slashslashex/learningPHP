@@ -1,0 +1,4 @@
+2,bandersnatch@example.org|Bandersnatch Gardner
+2,charles@milk.example.com|Charlie Tenniel
+1,alice@example.com|Alice Liddell
+1,dodgson@turtle.example.com|Lewis Humbert
