@@ -57,23 +57,25 @@ $csvFile = 'dishes.csv';
 
 // Чтение содержимого CSV файла
 $rows = file($csvFile);
-
+print '<pre>';
+print_r($rows);
+print '</pre>';
 // Создание HTML таблицы
 echo '<table>';
 
 // Вывод заголовков таблицы (первая строка CSV файла)
-echo '<tr>';
-foreach ($rows[0] as $header) {
-    echo '<th>' . htmlspecialchars($header) . '</th>';
-}
-echo '</tr>';
+//echo '<tr>';
+//foreach ($rows[0] as $header) {
+//    echo '<th>' . htmlspecialchars($header) . '</th>';
+//}
+//echo '</tr>';
 
 // Вывод данных таблицы (остальные строки CSV файла)
-for ($i = 1; $i < count($rows); $i++) {
+for ($i = 0; $i < count($rows); $i++) {
     echo '<tr>';
-    foreach ($rows[$i] as $value) {
-        echo '<td>' . htmlspecialchars($value) . '</td>';
-    }
+
+    echo '<td>' . htmlspecialchars($rows[$i]) . '</td>';
+
     echo '</tr>';
 }
 
